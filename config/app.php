@@ -232,4 +232,7 @@ return [
 
     ],
 
+    'phone' => '6290077513',
+    'email' => 'eshopper@gmail.com',
+
 ];
