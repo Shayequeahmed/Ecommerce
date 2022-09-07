@@ -19,7 +19,7 @@ use App\Http\Controllers\Admin\AdminController;
     return view('welcome');
 });*/
 
-Route::get('/',[HomeController::class,'index']);
+Route::get('/',[HomeController::class,'index'])->name('/');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
