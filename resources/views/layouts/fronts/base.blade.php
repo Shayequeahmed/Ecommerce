@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
     <link href="{{asset('fronts/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('fronts/css/font-awesome.min.css')}}" rel="stylesheet">
@@ -85,15 +86,20 @@
                         </div>
                     </div>
                     <div class="col-sm-8">
+                        @if (Route::has('login'))
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
+                                @auth
                                 <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                                 <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                                @else
                                 <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                                <li><a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                                @endauth
                             </ul>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
