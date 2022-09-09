@@ -30,7 +30,8 @@ require __DIR__.'/auth.php';
 
 require __DIR__.'/adminauth.php';
 
-Route::get('/products',[ProductController::class,'index']);
+Route::get('/products',[ProductController::class,'index'])->name('products');
+Route::get('/product/show/{slug?}',[ProductController::class,'show'])->name('product.details');
 
 
 
