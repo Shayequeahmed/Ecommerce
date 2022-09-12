@@ -18,9 +18,11 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<a href="{{route('product.details')}}"><img src="{{asset('fronts/images/shop/product12.jpg')}}" alt="" />
-										<h2>$56</h2>
-										<p>Easy Polo Black Edition</p></a>
+										<a href="{{route('products.details', 'men-shirt')}}">
+											<img src="{{asset('fronts/images/shop/product12.jpg')}}" alt="" />
+											<h2>$56</h2>
+											<p>Easy Polo Black Edition</p>
+										</a>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 								</div>
