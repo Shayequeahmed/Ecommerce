@@ -54,16 +54,32 @@
 								<span>
 									<span>US $59</span>
 									<label>Quantity:</label>
-									<input type="text" value="3" />
-									<button type="button" class="btn btn-fefault cart">
-										<i class="fa fa-shopping-cart"></i>
-										Add to cart
-									</button>
+									<input type="number" value="3" />
+									
 								</span>
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Condition:</b> New</p>
 								<p><b>Brand:</b> E-SHOPPER</p>
-								<a href=""><img src="{{asset('fronts/images/product-details/share.png')}}" class="share img-responsive"  alt="" /></a>
+								<p>
+									<b>Product Availabe Colors:</b>
+									<label><input type="radio"> Red</label>
+									<label><input type="radio"> Yellow</label>
+									<label><input type="radio"> Green</label>
+								</p>
+								<p>
+									<b>Product Avaialbe Size</b>
+									<label><input type="radio"> XL</label>
+									<label><input type="radio"> M</label>
+									<label><input type="radio"> L</label>
+									<label><input type="radio"> XXL</label>
+								</p>
+								<button type="button" class="btn btn-fefault cart">
+										<i class="fa fa-shopping-cart"></i>
+										Add to cart
+								</button>
+								<a href="{{route('checkout')}}" class="btn btn-fefault cart">
+										Buy Now
+								</a>
 							</div><!--/product-information-->
 						</div>
 					</div><!--/product-details-->

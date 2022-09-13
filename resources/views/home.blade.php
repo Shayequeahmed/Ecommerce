@@ -22,6 +22,7 @@
 	                                    <p>Easy Polo Black Edition</p>
 	                                	</a>
 	                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                    <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                </div>
 	                        </div>
 	                        <div class="choose">
@@ -42,6 +43,7 @@
 		                                <p>Easy Polo Black Edition</p>
 		                            </a>
 	                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                            </div>
 	                        </div>
 	                        <div class="choose">
@@ -62,6 +64,7 @@
 		                                <p>Easy Polo Black Edition</p>
 		                            </a>
 	                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                            </div>
 	                        </div>
 	                        <div class="choose">
@@ -82,6 +85,7 @@
 		                                <p>Easy Polo Black Edition</p>
 		                            </a>
 	                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                            </div>
 	                            <img src="{{asset('fronts/images/home/new.png')}}" class="new" alt="" />
 	                        </div>
@@ -103,6 +107,7 @@
 		                                <p>Easy Polo Black Edition</p>
 		                            </a>
 	                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                            </div>
 	                            <img src="{{asset('fronts/images/home/sale.png')}}" class="new" alt="" />
 	                        </div>
@@ -122,13 +127,7 @@
 	                                <h2>$56</h2>
 	                                <p>Easy Polo Black Edition</p>
 	                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-	                            </div>
-	                            <div class="product-overlay">
-	                                <div class="overlay-content">
-	                                    <h2>$56</h2>
-	                                    <p>Easy Polo Black Edition</p>
-	                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-	                                </div>
+	                                <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                            </div>
 	                        </div>
 	                        <div class="choose">
@@ -162,6 +161,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -175,6 +175,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -188,6 +189,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -201,6 +203,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -217,6 +220,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -230,6 +234,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -243,6 +248,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -256,6 +262,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -272,6 +279,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -285,6 +293,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -298,6 +307,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -311,6 +321,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -327,6 +338,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -340,6 +352,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -353,6 +366,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -366,6 +380,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -382,6 +397,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -395,6 +411,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -408,6 +425,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -421,6 +439,7 @@
 	                                        <h2>$56</h2>
 	                                        <p>Easy Polo Black Edition</p>
 	                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                        <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                    </div>
 	                                    
 	                                </div>
@@ -444,6 +463,7 @@
 	                                            <h2>$56</h2>
 	                                            <p>Easy Polo Black Edition</p>
 	                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                            <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                        </div>
 	                                        
 	                                    </div>
@@ -457,6 +477,7 @@
 	                                            <h2>$56</h2>
 	                                            <p>Easy Polo Black Edition</p>
 	                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                            <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                        </div>
 	                                        
 	                                    </div>
@@ -470,6 +491,7 @@
 	                                            <h2>$56</h2>
 	                                            <p>Easy Polo Black Edition</p>
 	                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                            <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                        </div>
 	                                        
 	                                    </div>
@@ -485,6 +507,7 @@
 	                                            <h2>$56</h2>
 	                                            <p>Easy Polo Black Edition</p>
 	                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                            <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                        </div>
 	                                        
 	                                    </div>
@@ -498,6 +521,7 @@
 	                                            <h2>$56</h2>
 	                                            <p>Easy Polo Black Edition</p>
 	                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                            <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                        </div>
 	                                        
 	                                    </div>
@@ -511,6 +535,7 @@
 	                                            <h2>$56</h2>
 	                                            <p>Easy Polo Black Edition</p>
 	                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+	                                            <a href="{{route('checkout')}}" class="btn btn-default add-to-cart">Buy Now</a>
 	                                        </div>
 	                                        
 	                                    </div>
