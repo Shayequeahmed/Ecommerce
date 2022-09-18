@@ -18,6 +18,8 @@ class CreateCartsTable extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('coupon_id')->constrained()->onDelete('cascade');
             $table->timestamps();
+
+             $table->index(['user_id']);
         });
     }
 
