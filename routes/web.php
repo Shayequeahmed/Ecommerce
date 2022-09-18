@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,13 @@ Route::get('/products',[ProductController::class,'index'])->name('products');
 Route::get('/products/{slug}',[ProductController::class, 'show'])->name('products.details');
 Route::get('/checkout',[CheckoutController::class,'index'])->name('checkout');
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
+
+
+Route::prefix('/admin')->group(function() {
+    Route::group(['middleware' => 'admin.auth'], function() {
+        Route::get('category/index',[CategoryController::class,'index'])->name('category.index');
+   });
+});
 
 
 

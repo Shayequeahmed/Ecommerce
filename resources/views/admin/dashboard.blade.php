@@ -1,5 +1,5 @@
 @extends('layouts.admin.main')
-
+@section('title','Dashboard | E-Shopper')
 @section('title','Dashboard')
 @section('content')
 <div class="content-wrapper">
