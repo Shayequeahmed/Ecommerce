@@ -21,15 +21,12 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->integer('price_mp');
             $table->integer('price_sp');
-            $table->unsignedBigInteger('sub_category_id');
-            $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('brand_id');
+            $table->foreignId('sub_category_id')->constrained()->onDelete('cascade');
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            $table->foreignId('brand_id')->constrained()->onDelete('cascade');
             $table->tinyInteger('is_returnable')->default(0); // is_returnable => 0 = non-returnable, 1 = returnable
             $table->timestamps();
             $table->index(['code','sub_category_id','category_id','title']);
-            $table->foreign('sub_category_id')->references('id')->on('sub_categories');
-            $table->foreign('category_id')->references('id')->on('categories');
-            $table->foreign('brand_id')->references('id')->on('brands');
         });
     }
 

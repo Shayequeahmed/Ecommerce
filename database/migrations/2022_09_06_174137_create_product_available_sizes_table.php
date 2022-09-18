@@ -15,13 +15,11 @@ class CreateProductAvailableSizesTable extends Migration
     {
         Schema::create('product_available_sizes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('product_id');
-            $table->unsignedBigInteger('size_id');
+            $table->foreignId('product_id')->constrained()->onDelete('cascade');
+            $table->foreignId('size_id')->constrained()->onDelete('cascade');
             $table->timestamps();
 
             $table->index(['product_id','size_id']);
-            $table->foreign('product_id')->references('id')->on('products');
-            $table->foreign('size_id')->references('id')->on('sizes');
         });
     }
 

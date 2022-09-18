@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductAvailableColorsTable extends Migration
+class CreateCartItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreateProductAvailableColorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_available_colors', function (Blueprint $table) {
+        Schema::create('cart_items', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained()->onDelete('cascade');
-            $table->foreignId('color_id')->constrained()->onDelete('cascade');
             $table->timestamps();
-
-            $table->index(['product_id','color_id']);
-
         });
     }
 
@@ -31,6 +26,6 @@ class CreateProductAvailableColorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_available_colors');
+        Schema::dropIfExists('cart_items');
     }
 }
