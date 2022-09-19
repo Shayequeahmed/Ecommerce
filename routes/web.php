@@ -42,6 +42,8 @@ Route::get('/contact',[ContactController::class,'index'])->name('contact');
 Route::prefix('/admin')->group(function() {
     Route::group(['middleware' => 'admin.auth'], function() {
         Route::get('category/index',[CategoryController::class,'index'])->name('category.index');
+        Route::get('category/create',[CategoryController::class,'create'])->name('category.create');
+        Route::post('category/store',[CategoryController::class,'store'])->name('category.store');
    });
 });
 
