@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use App\Http\Controllers\Controller;
 
 class CategoryController extends Controller
 {
@@ -20,21 +22,35 @@ class CategoryController extends Controller
     */  
 
     public function create() {
+
         return view('admin.Category.create');
     }
 
     /** 
      * Store a newly created resource in storage. 
      * 
-     * @param  \Illuminate\Http\Request   $request 
-     * @return \Illuminate\Http\Response 
+     * @param  \Illuminate\Http\Request   $request  
      */  
 
     public function store(Request $request) {
-        echo '<pre>';
-        print_r($request->input());
-        print_r($request->files->all());
-        echo '</pre>';
+        $validateData = $request->validate([
+            'category' => 'required|unique:categories',
+            'description' => 'required',
+            //'image' => 'required|image|mimes:jpeg,jpg|max:1024'
+        ]);
 
+        if($request->hasFile('image')) {
+            $file = $request->file('image');
+            $name = time().'_'.$file->getClientOriginalName();
+            $file->move('uploads/category',$name);
+            $validateData['image'] = $name;
+        }
+        
+        $validateData['created_at'] = $validateData['updated_at'] = Carbon::now();
+        Category::create($validateData);
+
+        return redirect()
+                ->intended('admin/category/index')
+                    ->with('success','Category Added Successfully');
     }
 }
