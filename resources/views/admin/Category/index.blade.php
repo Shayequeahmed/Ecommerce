@@ -43,7 +43,7 @@
 		              	@endif
 		            	</td>
 		              <td> {{ date('d-m-Y', strtotime($category->created_at) ) }} </td>
-		              <td><i class="mdi mdi-pencil-box mdi-24px"></i></td>
+		              <td><i class="mdi mdi-pencil-box icon-md"></i></td>
 		            </tr>
 	            @endforeach
 	          </tbody>

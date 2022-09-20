@@ -16,10 +16,16 @@
               <div class="form-group">
                 <label for="exampleInputUsername1">Category Name</label>
                 <input type="text" class="form-control" placeholder="Category Name" name="category">
+                @error('category')
+                <p class="text-danger">{{  $message }}</p>
+                @enderror
               </div>
               <div class="form-group">
                 <label for="exampleTextarea1">Description</label>
                 <textarea class="form-control" rows="4" name="description"></textarea>
+                @error('description')
+                <p class="text-danger">{{  $message }}</p>
+                @enderror
               </div>
               <div class="form-group">
                 <label>Category Image</label>
