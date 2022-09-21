@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Http\Controllers\Controller;
@@ -42,8 +43,9 @@ class CategoryController extends Controller
 
         if($request->hasFile('image')) {
             $file = $request->file('image');
-            $name = time().'_'.$file->getClientOriginalName();
-            $file->move('uploads/category',$name);
+            $extension = $file->getClientOriginalExtension();
+            $name = time().Str::random(10).'.'.$extension;
+            $file->move('uploads',$name);
             $validateData['image'] = $name;
         }
         
@@ -51,7 +53,11 @@ class CategoryController extends Controller
         Category::create($validateData);
 
         return redirect()
-                ->intended('admin/category/index')
+                ->route('category.index')
                     ->with('success','Category Added Successfully');
+    }
+
+    public function edit($id) {
+        echo $id;
     }
 }
