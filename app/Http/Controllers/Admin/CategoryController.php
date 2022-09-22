@@ -57,7 +57,24 @@ class CategoryController extends Controller
                     ->with('success','Category Added Successfully');
     }
 
+    /**
+    * Show the form for editing the specified resource.
+    *
+    * @param  int  $id
+    * @return Response
+    */
+
     public function edit($id) {
-        echo $id;
+
+        $category = Category::find($id);
+
+        if(is_null($category)) {
+            return redirect()
+                        ->route('category.index')
+                            ->with('error',"Category with id $id is not Found");
+        }
+
+        return view('admin.Category.edit',['category' => $category]);
     }
+
 }
