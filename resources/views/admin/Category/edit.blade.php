@@ -11,7 +11,7 @@
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <form class="forms-sample" action="{{route('category.store')}}" method="POST" enctype="multipart/form-data">
+            <form class="forms-sample" action="{{route('category.update',$category->id)}}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="form-group">
                 <label for="exampleInputUsername1" class="text-primary">Category Name</label>

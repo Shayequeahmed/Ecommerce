@@ -77,4 +77,44 @@ class CategoryController extends Controller
         return view('admin.Category.edit',['category' => $category]);
     }
 
+    /** 
+     * Update the specified resource in storage. 
+     * @param  \Illuminate\Http\Request   $request 
+     * @param  int  $id 
+     * @return \Illuminate\Http\Response 
+     */
+    public function update(Request $request, $id) {
+
+        $validateData = $request->validate([
+            'category' => 'required | unique:categories,id,'.$id,
+            'description' => 'required'
+        ]);
+
+        $category = Category::find($id);
+        if(!is_null($category)) {
+
+            $oldImage = $category->image;
+            $validateData['image'] = $oldImage;
+
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $extension = $file->getClientOriginalExtension();
+                $name = time().Str::random(10).'.'.$extension;
+                $file->move('uploads',$name);
+                $validateData['image'] = $name;
+            }
+
+            $validateData['updated_at'] = Carbon::now();
+            $category->update($validateData);
+
+            if(!is_null($oldImage) && $request->hasFile('image')) {
+                $imagePath = public_path('uploads/'.$oldImage);
+                unlink($imagePath);
+            }
+
+            return redirect()->route('category.index')->with('success','Category Updated Successfully');
+
+        }
+    }  
+
 }
