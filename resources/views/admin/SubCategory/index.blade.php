@@ -29,26 +29,27 @@
 		            </tr>
 		          </thead>
 		          <tbody>
-		          	@foreach($categories as $category)
+		          	@foreach($subcategories as $subcategory)
 			            <tr>
-			              <td>{{ $category->id }}</td>
+			              <td>{{ $subcategory->id }}</td>
 			              <td class="py-1">
-			                @if(isset($category->image))
-			                	<img src="{{asset('uploads')}}/{{$category->image}}" alt="image" />
+			                @if(isset($subcategory->image))
+			                	<img src="{{asset('uploads')}}/{{$subcategory->image}}" alt="image" />
 			                @else
 			                	<img src="{{asset('uploads/No-image-available.png')}}" alt="image" />
 			                @endif
 			              </td>
-			              <td> {{ $category->category }} </td>
+			              <td> {{ $subcategory->category }} </td>
+			              <td> {{ $subcategory->category_id }} </td>
 			              <td> 
-			              	@if($category->status == 1 )
+			              	@if($subcategory->status == 1 )
 			              	  <label class="badge badge-success">Active</label>
 			              	@else
 			              		<label class="badge badge-danger">Inactive</label>
 			              	@endif
 			            	</td>
-			              <td> {{ date('d-m-Y', strtotime($category->created_at) ) }} </td>
-			              <td><a href="{{route('category.edit',$category->id)}}"><i class="mdi mdi-pencil-box icon-md"></i></a></td>
+			              <td> {{ date('d-m-Y', strtotime($subcategory->created_at) ) }} </td>
+			              <td><a href="{{route('subcategory.edit',$subcategory->id)}}"><i class="mdi mdi-pencil-box icon-md"></i></a></td>
 			            </tr>
 		            @endforeach
 		          </tbody>

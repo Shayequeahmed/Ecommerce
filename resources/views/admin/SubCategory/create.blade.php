@@ -11,7 +11,7 @@
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <form class="forms-sample" action="" method="POST" enctype="multipart/form-data">
+            <form class="forms-sample" action="{{route('subcategory.store')}}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="form-group">
                 <label for="exampleInputUsername1">SubCategory Name</label>
@@ -42,7 +42,7 @@
                 <select class="form-control"  name="category_id">
                   <option>Select Category</option>
                   @foreach($categories as $category)
-                    <option value="{{$category->id}}">{{$category->category}}</option>
+                    <option value="{{$category->id}}" @if (old('category_id') == $category->id) {{ 'selected' }} @endif >{{$category->category}}</option>
                   @endforeach
                 </select>
                 @error('category_id')
