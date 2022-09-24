@@ -8,7 +8,7 @@
     <div class="page-header">
       <h3 class="page-title"> SubCategory Table </h3>
       <nav aria-label="breadcrumb">
-      	<a href="" class="btn btn-gradient-primary btn-fw">New SubCategory</a>
+      	<a href="{{route('subcategory.create')}}" class="btn btn-gradient-primary btn-fw">New SubCategory</a>
       </nav>
     </div>
 	<div class="row">

@@ -50,6 +50,7 @@ Route::prefix('/admin')->group(function() {
 
 
         Route::get('subcategory/index',[SubCategoryController::class,'index'])->name('subcategory.index');
+        Route::get('subcategory/create',[SubCategoryController::class,'create'])->name('subcategory.create');
    });
 });
 
