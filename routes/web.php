@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\SubCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,9 @@ Route::prefix('/admin')->group(function() {
         Route::post('category/store',[CategoryController::class,'store'])->name('category.store');
         Route::get('category/{id}/edit',[CategoryController::class,'edit'])->name('category.edit');
         Route::post('category/update/{id}',[CategoryController::class,'update'])->name('category.update');
+
+
+        Route::get('subcategory/index',[SubCategoryController::class,'index'])->name('subcategory.index');
    });
 });
 

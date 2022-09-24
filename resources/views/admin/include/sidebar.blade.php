@@ -26,5 +26,11 @@
         <i class="mdi mdi-view-list menu-icon"></i>
       </a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{route('subcategory.index')}}">
+        <span class="menu-title">Sub Category</span>
+        <i class="mdi mdi-view-list menu-icon"></i>
+      </a>
+    </li>
   </ul>
 </nav>
