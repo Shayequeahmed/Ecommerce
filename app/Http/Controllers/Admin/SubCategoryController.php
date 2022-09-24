@@ -43,4 +43,20 @@ class SubCategoryController extends Controller
 
         return redirect()->route('subcategory.index')->with('success','SubCategory Added Successfully');
     }
+
+    public function edit($id) {
+        $subcategory = SubCategory::find($id);
+        $categories = Category::all();
+        if(is_null($subcategory)) {
+            return redirect()->route('subcategory.index')->with('error',"SubCategory With id $id is not Found");
+        }
+
+        return view('admin.SubCategory.edit',[
+            'subcategory' => $subcategory,
+            'categories'  => $categories
+        ]);
+    }
+    public function update(Request $request, $id) {
+        
+    }
 }
