@@ -13,4 +13,8 @@ class SizeController extends Controller
         $sizes = Size::all();
         return view('admin.Size.index',['sizes' => $sizes]);
     }
+
+    public function create() {
+        return view('admin.Size.create');
+    }
 }
