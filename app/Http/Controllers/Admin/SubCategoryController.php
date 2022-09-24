@@ -57,6 +57,37 @@ class SubCategoryController extends Controller
         ]);
     }
     public function update(Request $request, $id) {
-        
+        $validateData = $request->validate([
+            'category'      => 'required|unique:sub_categories,id',$id,
+            'description'   => 'required',
+            'category_id'   => 'required|integer',
+        ]);
+
+        $subcategory = SubCategory::find($id);
+
+        if(!is_null($subcategory)) {
+
+            $oldImage = $subcategory->image;
+            $validateData['image'] = $oldImage;
+
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $extension = $file->getClientOriginalExtension();
+                $name = time().Str::random(10).'.'.$extension;
+                $file->move('uploads',$name);
+                $validateData['image'] = $name;
+            }
+
+            $validateData['updated_at'] = Carbon::now();
+            $subcategory->update($validateData);
+
+            if(!is_null($oldImage) && $request->hasFile('image')) {
+                $imagePath = public_path('uploads/'.$oldImage);
+                unlink($imagePath);
+            }
+
+            return redirect()->route('subcategory.index')->with('success','SubCategory Updated Successfully');
+
+        }
     }
 }
