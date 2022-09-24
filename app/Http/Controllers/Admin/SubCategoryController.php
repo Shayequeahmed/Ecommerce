@@ -58,7 +58,7 @@ class SubCategoryController extends Controller
     }
     public function update(Request $request, $id) {
         $validateData = $request->validate([
-            'category'      => 'required|unique:sub_categories,id',$id,
+            'category'      => 'required|unique:sub_categories,category,'.$id,
             'description'   => 'required',
             'category_id'   => 'required|integer',
         ]);
