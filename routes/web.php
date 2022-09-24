@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\Admin\SizeController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SubCategoryController;
@@ -54,6 +55,9 @@ Route::prefix('/admin')->group(function() {
         Route::post('subcategory/store',[SubCategoryController::class,'store'])->name('subcategory.store');
         Route::get('subcategory/{id}/edit',[SubCategoryController::class,'edit'])->name('subcategory.edit');
         Route::post('subcategory/update/{id}',[SubCategoryController::class,'update'])->name('subcategory.update');
+
+
+        Route::get('size/index',[SizeController::class,'index'])->name('size.index');
    });
 });
 
