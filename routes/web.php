@@ -60,6 +60,7 @@ Route::prefix('/admin')->group(function() {
         Route::get('size/index',[SizeController::class,'index'])->name('size.index');
         Route::get('size/create',[SizeController::class,'create'])->name('size.create');
         Route::post('size/store',[SizeController::class,'store'])->name('size.store');
+        Route::get('size/{id}/edit',[SizeController::class,'edit'])->name('size.edit');
    });
 });
 
