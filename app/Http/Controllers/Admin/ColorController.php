@@ -14,4 +14,9 @@ class ColorController extends Controller
         $colors = Color::paginate(10);
         return view('admin.Color.index',['colors' => $colors]);
     }
+
+    public function create()
+    {
+        return view('admin.Color.create');
+    }
 }

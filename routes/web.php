@@ -66,6 +66,10 @@ Route::prefix('/admin')->group(function() {
 
 
         Route::get('color/index',[ColorController::class,'index'])->name('color.index');
+        Route::get('color/create',[ColorController::class,'create'])->name('color.create');
+        Route::post('color/store',[ColorController::class,'store'])->name('color.store');
+        Route::get('color/{id}/edit',[ColorController::class,'edit'])->name('color.edit');
+        Route::get('color/update/{id}',[ColorController::class,'update'])->name('color.update');
    });
 });
 

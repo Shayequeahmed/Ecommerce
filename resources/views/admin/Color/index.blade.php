@@ -8,7 +8,7 @@
     <div class="page-header">
       <h3 class="page-title"> Color Table </h3>
       <nav aria-label="breadcrumb">
-      	<a href="" class="btn btn-gradient-primary btn-fw">New Color</a>
+      	<a href="{{route('color.create')}}" class="btn btn-gradient-primary btn-fw">New Color</a>
       </nav>
     </div>
 	<div class="row">
