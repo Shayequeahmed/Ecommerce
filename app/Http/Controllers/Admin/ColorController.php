@@ -19,4 +19,14 @@ class ColorController extends Controller
     {
         return view('admin.Color.create');
     }
+
+    public function store(Request $request)
+    {
+        $validateData = $request->validate([
+            'color' => 'required|unique:colors',
+            'code'  => 'required|unique:colors',
+        ]);
+        Color::create($validateData);
+        return redirect()->route('color.index')->with('success','Color Created Successfully');
+    }
 }
