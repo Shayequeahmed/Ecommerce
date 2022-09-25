@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\Admin\SizeController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\ColorController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SubCategoryController;
 
@@ -62,6 +63,9 @@ Route::prefix('/admin')->group(function() {
         Route::post('size/store',[SizeController::class,'store'])->name('size.store');
         Route::get('size/{id}/edit',[SizeController::class,'edit'])->name('size.edit');
         Route::post('size/update/{id}',[SizeController::class,'update'])->name('size.update');
+
+
+        Route::get('color/index',[ColorController::class,'index'])->name('color.index');
    });
 });
 

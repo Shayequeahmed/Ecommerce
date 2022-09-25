@@ -13,8 +13,11 @@ class SubCategoryController extends Controller
 {
     //
 
-    public function index() {
+    public function index()
+    {
+        // dd(SubCategory::find(1)->category);
         $subcategories = SubCategory::all();
+
         return view('admin.SubCategory.index',['subcategories' => $subcategories]);
     }
 
@@ -25,7 +28,7 @@ class SubCategoryController extends Controller
 
     public function store(Request $request) {
         $validateData = $request->validate([
-            'category'      => 'required|unique:sub_categories',
+            'sub_category'      => 'required|unique:sub_categories',
             'description'   => 'required',
             'category_id'   => 'required|integer',
         ]);
@@ -58,7 +61,7 @@ class SubCategoryController extends Controller
     }
     public function update(Request $request, $id) {
         $validateData = $request->validate([
-            'category'      => 'required|unique:sub_categories,category,'.$id,
+            'sub_category'      => 'required|unique:sub_categories,sub_category,'.$id,
             'description'   => 'required',
             'category_id'   => 'required|integer',
         ]);

@@ -11,12 +11,12 @@
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <form class="forms-sample" action="{{route('size.update',$size->id)}}" method="POST" enctype="multipart/form-data">
+            <form class="forms-sample" action="{{route('size.update',$size->id)}}" method="POST">
               @csrf
               <div class="form-group">
                 <label for="exampleInputUsername1" class="text-primary">Size</label>
                 <input type="text" class="form-control" placeholder="Size" name="size" value="{{ $size->size }}">
-                @error('category')
+                @error('size')
                 <p class="text-danger">{{  $message }}</p>
                 @enderror
               </div>

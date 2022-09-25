@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class SubCategory extends Model
 {
@@ -17,6 +18,11 @@ class SubCategory extends Model
      * @var array
      */
     protected $fillable = [
-        'category', 'description', 'category_id', 'image'
+        'sub_category', 'description', 'category_id', 'image'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

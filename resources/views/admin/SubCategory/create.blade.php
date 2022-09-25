@@ -15,8 +15,8 @@
               @csrf
               <div class="form-group">
                 <label for="exampleInputUsername1">SubCategory Name</label>
-                <input type="text" class="form-control" placeholder="Category Name" name="category" value="{{ old('category') }}">
-                @error('category')
+                <input type="text" class="form-control" placeholder="Category Name" name="sub_category" value="{{ old('sub_category') }}">
+                @error('sub_category')
                 <p class="text-danger">{{  $message }}</p>
                 @enderror
               </div>

@@ -39,8 +39,8 @@
 			                	<img src="{{asset('uploads/No-image-available.png')}}" alt="image" />
 			                @endif
 			              </td>
-			              <td> {{ $subcategory->category }} </td>
-			              <td> {{ $subcategory->category_id }} </td>
+			              <td> {{ $subcategory->sub_category }} </td>
+			              <td> {{ $subcategory->category->category }} </td>
 			              <td> 
 			              	@if($subcategory->status == 1 )
 			              	  <label class="badge badge-success">Active</label>
