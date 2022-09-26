@@ -15,14 +15,14 @@
               @csrf
               <div class="form-group">
                 <label for="exampleInputUsername1" class="text-primary">Color</label>
-                <input type="text" class="form-control" placeholder="Size" name="color" value="{{ $color->color }}">
+                <input type="text" class="form-control" placeholder="Color Name" name="color" value="{{ $color->color }}">
                 @error('color')
                 <p class="text-danger">{{  $message }}</p>
                 @enderror
               </div>
               <div class="form-group">
                 <label for="exampleInputUsername1" class="text-primary">Code</label>
-                <input type="text" class="form-control" placeholder="Code" name="code" value="{{ $color->code }}">
+                <input type="text" class="form-control" placeholder="Color Code" name="code" value="{{ $color->code }}">
                 @error('code')
                 <p class="text-danger">{{  $message }}</p>
                 @enderror

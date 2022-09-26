@@ -15,7 +15,7 @@
               @csrf
               <div class="form-group">
                 <label for="exampleInputUsername1">Color</label>
-                <input type="text" class="form-control" placeholder="Color" name="color" value="{{ old('color') }}">
+                <input type="text" class="form-control" placeholder="Color Name" name="color" value="{{ old('color') }}">
                 @error('color')
                 <p class="text-danger">{{  $message }}</p>
                 @enderror
