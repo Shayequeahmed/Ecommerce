@@ -43,6 +43,12 @@
         <span class="menu-title">Color</span>
         <i class="mdi mdi-format-align-center menu-icon"></i>
       </a>
+    </li> 
+    <li class="nav-item">
+      <a class="nav-link" href="{{route('brand.index')}}">
+        <span class="menu-title">Brand</span>
+        <i class="mdi mdi-format-align-center menu-icon"></i>
+      </a>
     </li>
   </ul>
 </nav>
