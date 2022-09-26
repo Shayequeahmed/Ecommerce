@@ -1,6 +1,6 @@
 @extends('layouts.admin.main')
 
-@section('title', 'Edit SubCategory | E-Shopper')
+@section('title', 'Edit Size | E-Shopper')
 
 @section('content')
 <div class="content-wrapper">

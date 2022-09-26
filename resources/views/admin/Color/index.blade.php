@@ -33,7 +33,7 @@
 			              <td> {{ $color->color }} </td>
 			              <td> {{ $color->code }} </td>
 			              <td> {{ date('d-m-Y', strtotime($color->created_at) ) }} </td>
-			              <td><a href="#"><i class="mdi mdi-pencil-box icon-md"></i></a></td>
+			              <td><a href="{{route('color.edit',$color->id)}}"><i class="mdi mdi-pencil-box icon-md"></i></a></td>
 			            </tr>
 		            @endforeach
 		          </tbody>
