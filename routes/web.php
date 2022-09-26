@@ -75,8 +75,11 @@ Route::prefix('/admin')->group(function() {
         Route::post('color/update/{id}',[ColorController::class,'update'])->name('color.update');
 
         // Routes For Brands
-
         Route::get('brand/index',[BrandController::class,'index'])->name('brand.index');
+        Route::get('brand/create',[BrandController::class,'create'])->name('brand.create');
+        Route::post('brand/store',[BrandController::class,'store'])->name('brand.store');
+        Route::get('brand/{id}/edit',[BrandController::class,'edit'])->name('brand.edit');
+        Route::post('brand/update/{id}',[BrandController::class,'update'])->name('brand.update');
    });
 });
 

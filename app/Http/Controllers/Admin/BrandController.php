@@ -15,4 +15,9 @@ class BrandController extends Controller
         $brands = Brand::paginate(10);
         return view('admin.Brand.index',['brands' => $brands]);
     }
+
+    public function create()
+    {
+        return view('admin.Brand.create');
+    }
 }

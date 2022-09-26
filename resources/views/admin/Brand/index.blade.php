@@ -8,7 +8,7 @@
     <div class="page-header">
       <h3 class="page-title"> Brand Table </h3>
       <nav aria-label="breadcrumb">
-      	<a href="" class="btn btn-gradient-primary btn-fw">New Brand</a>
+      	<a href="{{ route('brand.create') }}" class="btn btn-gradient-primary btn-fw">New Brand</a>
       </nav>
     </div>
 	<div class="row">
