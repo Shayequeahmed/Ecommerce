@@ -41,4 +41,13 @@ class BrandController extends Controller
         Brand::create($validateData);
         return redirect()->route('brand.index')->with('success','Brand added Successfully');
     }
+
+    public function edit($id)
+    {
+        $brand = Brand::find($id);
+        if(is_null($brand)) {
+            return redirect()->route('brand.index')->with('error',"Brand With Id $id is not Found");
+        }
+        return view('admin.Brand.edit',['brand' => $brand]);
+    }
 }
