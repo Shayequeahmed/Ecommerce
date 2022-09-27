@@ -50,4 +50,28 @@ class BrandController extends Controller
         }
         return view('admin.Brand.edit',['brand' => $brand]);
     }
+
+    public function update(Request $request,$id)
+    {
+        $validateData = $request->validate([
+            'name' => 'required|unique:brands,name,'.$id,
+        ]);
+
+        $brand = Brand::find($id);
+        if(!is_null($brand)) {
+            $oldImage = $brand->image;
+            $validateData['image'] = $oldImage;
+
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $extension = $file->getClientOriginalExtension();
+                $name = time().Str::random(10).'.'.$extension;
+                $file->move('uploads',$name);
+                $validateData['image'] = $name;
+            }
+            $validateData['updated_at'] = Carbon::now();
+            $brand->update($validateData);
+            return redirect()->route('brand.index')->with('success','Brand Updated Successfully');
+        }
+    }
 }
