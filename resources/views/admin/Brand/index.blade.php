@@ -31,13 +31,13 @@
 			            <tr>
 			              <td>{{ $brand->id }}</td>
 			              <td class="py-1">
-			                @if(isset($category->image))
+			                @if(isset($brand->image))
 			                	<img src="{{asset('uploads')}}/{{$brand->image}}" alt="image" />
 			                @else
 			                	<img src="{{asset('uploads/No-image-available.png')}}" alt="image" />
 			                @endif
 			              </td>
-			              <td> {{ $brand->brand }} </td>
+			              <td> {{ $brand->name }} </td>
 			              <td> {{ date('d-m-Y', strtotime($brand->created_at) ) }} </td>
 			              <td><a href="{{route('brand.edit',$brand->id)}}"><i class="mdi mdi-pencil-box icon-md"></i></a></td>
 			            </tr>

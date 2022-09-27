@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Brand;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use App\Http\Controllers\Controller;
 
 class BrandController extends Controller
@@ -19,5 +21,24 @@ class BrandController extends Controller
     public function create()
     {
         return view('admin.Brand.create');
+    }
+
+    public function store(Request $request)
+    {
+        $validateData = $request->validate([
+            'name' => 'required|unique:brands',
+        ]);
+
+        if($request->hasFile('image'))
+        {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $name = time().Str::random(10).'.'.$extension;
+            $file->move('uploads',$name);
+            $validateData['image'] = $name;
+        }
+        $validateData['created_at'] = $validateData['updated_at'] = Carbon::now();
+        Brand::create($validateData);
+        return redirect()->route('brand.index')->with('success','Brand added Successfully');
     }
 }
