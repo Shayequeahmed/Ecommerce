@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\SizeController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\ColorController;
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SubCategoryController;
 
@@ -80,6 +81,9 @@ Route::prefix('/admin')->group(function() {
         Route::post('brand/store',[BrandController::class,'store'])->name('brand.store');
         Route::get('brand/{id}/edit',[BrandController::class,'edit'])->name('brand.edit');
         Route::post('brand/update/{id}',[BrandController::class,'update'])->name('brand.update');
+
+        //Routes for Products
+        Route::get('product/index',[AdminProductController::class,'index'])->name('product.index');
    });
 });
 
