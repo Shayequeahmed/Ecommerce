@@ -84,6 +84,10 @@ Route::prefix('/admin')->group(function() {
 
         //Routes for Products
         Route::get('product/index',[AdminProductController::class,'index'])->name('product.index');
+        Route::get('product/create',[AdminProductController::class,'create'])->name('product.create');
+        Route::get('product/fetchsubcategory/',[AdminProductController::class,'fetchsubcategory'])->name('getsubcategory');
+        Route::post('product/store',[AdminProductController::class,'store'])->name('product.store');
+        Route::get('product/create',[AdminProductController::class,'create'])->name('product.create');
    });
 });
 

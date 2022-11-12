@@ -1,6 +1,6 @@
 @extends('layouts.admin.main')
 
-@section('title','Size |E-Shopper')
+@section('title','Product |E-Shopper')
 
 @section('content')
 <div class="content-wrapper">
@@ -8,7 +8,7 @@
     <div class="page-header">
       <h3 class="page-title"> Product Table </h3>
       <nav aria-label="breadcrumb">
-      	<a href="" class="btn btn-gradient-primary btn-fw">New Product</a>
+      	<a href="{{route('product.create')}}" class="btn btn-gradient-primary btn-fw">New Product</a>
       </nav>
     </div>
 	<div class="row">
