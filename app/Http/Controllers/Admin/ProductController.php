@@ -36,19 +36,22 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'title' => 'bail|required | unique:products |max:255',
-            'code' => 'bail|required|unique:products|max:255',
-            'summary' => 'required',
-            'description' => 'required',
-            'price_mp' => 'bail|required|integer|gt:0',
-            'price_sp' => 'bail | required | integer | gt:0',
-            'brand_id' => 'bail| required|gt:0',
-            'category_id' => 'bail | required| gt:0'
-            'sub_category_id' => 'bail | required| gt:0'
+            'title'             => 'bail|required | unique:products |max:255',
+            'code'              => 'bail|required|unique:products|max:255',
+            'summary'           => 'required',
+            'description'       => 'required',
+            'price_mp'          => 'bail|required|integer|gt:0',
+            'price_sp'          => 'bail | required | integer | gt:0',
+            'brand_id'          => 'bail| required|gt:0',
+            'category_id'       => 'bail | required| gt:0',
+            'sub_category_id'   => 'bail | required| gt:0'
         ]);
-        
+
+        $validateData['slug'] = Str::slug($validateData['title']);
+        echo $validateData['slug'];
+        die;
         $validateData['created_at'] = $validateData['updated_at'] = Carbon::now();
         $lastProductId = Product::create($validateData)->id;
-        return redirect()->route('productcolor')->with('success','Please Add the Variation of the product');
+        return redirect()->route('productavailabecolor.create'. '?' . http_build_query(['product_id' => $lastProductId]))->with('success','Please Add the Variation of the product');
     }
 }

@@ -27,6 +27,7 @@ class BrandController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required|unique:brands',
+            'image' => 'required',
         ]);
 
         if($request->hasFile('image'))
@@ -37,17 +38,21 @@ class BrandController extends Controller
             $file->move('uploads',$name);
             $validateData['image'] = $name;
         }
+
         $validateData['created_at'] = $validateData['updated_at'] = Carbon::now();
         Brand::create($validateData);
-        return redirect()->route('brand.index')->with('success','Brand added Successfully');
+
+        return redirect()->route('brand.index')->with('success', 'Brand added Successfully');
     }
 
     public function edit($id)
     {
         $brand = Brand::find($id);
-        if(is_null($brand)) {
-            return redirect()->route('brand.index')->with('error',"Brand With Id $id is not Found");
+
+        if (is_null($brand)) {
+            return redirect()->route('brand.index')->with('error', "Brand With Id $id is not Found");
         }
+
         return view('admin.Brand.edit',['brand' => $brand]);
     }
 

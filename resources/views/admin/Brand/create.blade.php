@@ -29,6 +29,9 @@
                     <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
                   </span>
                 </div>
+                @error('image')
+                <p class="text-danger">{{  $message }}</p>
+                @enderror
               </div>
               <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
               <a href="{{route('brand.index')}}" class="btn btn-light">Cancel</a>

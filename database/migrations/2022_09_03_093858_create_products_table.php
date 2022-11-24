@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('code')->unique();
             $table->string('title');
+            $table->string('slug')->unique();
             $table->string('summary');
             $table->text('description');
             $table->integer('price_mp');
@@ -25,6 +26,7 @@ class CreateProductsTable extends Migration
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
             $table->foreignId('brand_id')->constrained()->onDelete('cascade');
             $table->tinyInteger('is_returnable')->default(0); // is_returnable => 0 = non-returnable, 1 = returnable
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
             $table->index(['code','sub_category_id','category_id','title']);
         });

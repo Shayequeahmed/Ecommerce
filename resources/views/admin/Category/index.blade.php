@@ -35,7 +35,7 @@
 			                @if(isset($category->image))
 			                	<img src="{{asset('uploads')}}/{{$category->image}}" alt="image" />
 			                @else
-			                	<img src="{{asset('uploads/No-image-available.png')}}" alt="image" />
+			                	<img src="{{asset('uploads/no_images.png')}}" alt="image" />
 			                @endif
 			              </td>
 			              <td> {{ $category->category }} </td>

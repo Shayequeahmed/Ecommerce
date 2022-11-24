@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\ColorController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SubCategoryController;
+use App\Http\Controllers\Admin\ProductAvailableColorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,6 +89,7 @@ Route::prefix('/admin')->group(function() {
         Route::get('product/fetchsubcategory/',[AdminProductController::class,'fetchsubcategory'])->name('getsubcategory');
         Route::post('product/store',[AdminProductController::class,'store'])->name('product.store');
         Route::get('product/create',[AdminProductController::class,'create'])->name('product.create');
+        Route::get('product-color/create',[ProductAvailableColorController::class,'create'])->name('productavailabecolor.create');
    });
 });
 
